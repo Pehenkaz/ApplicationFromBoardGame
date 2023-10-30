@@ -1,6 +1,0 @@
-﻿<Properties StartupConfiguration="{1BAA61D5-C197-4505-AF8E-52F97327FA14}|https">
-  <MonoDevelop.Ide.ItemProperties.ApplicationFromBoardGame.BL FirstBuild="True" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.ApplicationFromBoardGame.DataAccess FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.ApplicationFromBoardGame.WebAPI FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
-</Properties>
