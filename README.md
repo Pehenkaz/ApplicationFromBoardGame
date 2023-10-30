@@ -57,4 +57,4 @@
 - Подтверждать регистрацию Хранителя
 - Удалять кампании
 
-![Model](https://github.com/Pehenkaz/ApplicationFromBoardGame/commit/28c58515e77fad68b14fe1cad5ac8193aae9f841)
+![Model](https://github.com/Pehenkaz/ApplicationFromBoardGame/commit/310cb3435df8142a9f7d8851733a3745a9a98f63)
