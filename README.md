@@ -56,3 +56,5 @@
 - Удалять профили Хранителей
 - Подтверждать регистрацию Хранителя
 - Удалять кампании
+
+![Model](https://github.com/Pehenkaz/ApplicationFromBoardGame/commit/28c58515e77fad68b14fe1cad5ac8193aae9f841)
