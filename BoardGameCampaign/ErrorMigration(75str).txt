@@ -87,3 +87,11 @@ Microsoft.EntityFrameworkCore.Design.OperationException: Unable to create an obj
    at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.<>c__DisplayClass3_0`1.<Execute>b__0()
    at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
 Unable to create an object of type 'BoardGameCampaignDbContext'. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728
+
+
+
+
+Консоль: /Volumes/Transcend/Учёба/Программирование/MS/sem1/ApplicationFromBoardGame/BoardGameCampaign   main ±  dotnet ef migrations add --project BoardGameCampaign.DataAccess --startup-project BoardGameCampaign.Service --context BoardGameCampaign.DataAccess.BoardGameCampaignDbContext --output-dir BoardGameCampaign.DataAccess/Migrations MigrationEntities
+Build started...
+Build succeeded.
+Unable to create an object of type 'BoardGameCampaignDbContext'. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728
