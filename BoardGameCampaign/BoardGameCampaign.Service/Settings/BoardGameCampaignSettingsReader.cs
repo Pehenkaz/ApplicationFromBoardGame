@@ -8,7 +8,10 @@ namespace BoardGameCampaign.Service.Settings
         public static BoardGameCampaignSettings Read(IConfiguration configuration)
         {
             //здесь будет чтение настроек приложения из конфига
-            return new BoardGameCampaignSettings();
+            return new BoardGameCampaignSettings()
+            {
+                BoardGameCampaignDbContextConnectionString = configuration.GetValue<string>("BoardGameCampaignDbContext")
+            };
         }
     }
 }
