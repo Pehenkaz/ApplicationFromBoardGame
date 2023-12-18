@@ -6,8 +6,8 @@ namespace BoardGameCampaign.DataAccess.Entities
 	public class MeetingEntity : BaseEntity
 	{
 		public DateTime Date { get; set; }
-		public TimeOnly TimeStart { get; set; }
-		public TimeOnly? TimeFinish { get; set; }
+		public TimeSpan TimeStart { get; set; }
+		public TimeSpan? TimeFinish { get; set; }
 
 		public int CampaignId { get; set; }
 		public CampaignEntity Campaign { get; set; }
