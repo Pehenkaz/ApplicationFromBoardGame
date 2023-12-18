@@ -1,11 +1,12 @@
-﻿using BoardGameCampaign.DataAccess.Entities;
+﻿using System.Linq.Expressions;
+using BoardGameCampaign.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BoardGameCampaign.DataAccess
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
-        public Repository(IDbContextFactory<DbContext> contextFactory)
+        public Repository(IDbContextFactory<BoardGameCampaignDbContext> contextFactory)
         {
             _contextFactory = contextFactory;
         }
@@ -14,6 +15,12 @@ namespace BoardGameCampaign.DataAccess
         {
             using var context = _contextFactory.CreateDbContext();
             return context.Set<T>();
+        }
+
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            return context.Set<T>().Where(filter).ToList();
         }
 
         public T? GetById(int id)
@@ -58,6 +65,6 @@ namespace BoardGameCampaign.DataAccess
             context.SaveChanges();
         }
 
-        private readonly IDbContextFactory<DbContext> _contextFactory;
+        private readonly IDbContextFactory<BoardGameCampaignDbContext> _contextFactory;
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGameCampaign.DataAcces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGameCampaign.BL", "BoardGameCampaign.BL\BoardGameCampaign.BL.csproj", "{4E5AB9A4-936C-43C7-8D35-F94E97CC33BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGameCampaign.UnitTests", "BoardGameCampaign.UnitTest\BoardGameCampaign.UnitTests.csproj", "{4B563F32-90C3-4734-82EA-F56A3115A5A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4E5AB9A4-936C-43C7-8D35-F94E97CC33BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E5AB9A4-936C-43C7-8D35-F94E97CC33BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E5AB9A4-936C-43C7-8D35-F94E97CC33BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B563F32-90C3-4734-82EA-F56A3115A5A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B563F32-90C3-4734-82EA-F56A3115A5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B563F32-90C3-4734-82EA-F56A3115A5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B563F32-90C3-4734-82EA-F56A3115A5A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
