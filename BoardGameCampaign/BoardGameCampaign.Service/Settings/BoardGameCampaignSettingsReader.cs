@@ -1,7 +1,7 @@
 ﻿using System;
-using BoardGameCampaign.WebAPI.Settings;
+using BoardGameCampaign.Service.Settings;
 
-namespace BoardGameCampaign.WebAPI.Settings
+namespace BoardGameCampaign.Service.Settings
 {
     public static class BoardGameCampaignSettingsReader
     {

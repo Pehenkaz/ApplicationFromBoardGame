@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGameCampaign.WebAPI", "BoardGameCampaign.WebAPI\BoardGameCampaign.WebAPI.csproj", "{3F36AFC9-1FA5-4E03-BACB-C8132511FA88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGameCampaign.Service", "BoardGameCampaign.Service\BoardGameCampaign.Service.csproj", "{3F36AFC9-1FA5-4E03-BACB-C8132511FA88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGameCampaign.DataAccess", "BoardGameCampaign.DataAccess\BoardGameCampaign.DataAccess.csproj", "{77FFD84D-5032-486C-9EB9-952B02922E91}"
 EndProject

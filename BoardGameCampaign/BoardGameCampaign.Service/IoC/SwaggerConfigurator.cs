@@ -1,4 +1,4 @@
-﻿namespace BoardGameCampaign.WebAPI.IoC
+﻿namespace BoardGameCampaign.Service.IoC
 {
     /// <summary>
     /// Static class for Swagger configuration

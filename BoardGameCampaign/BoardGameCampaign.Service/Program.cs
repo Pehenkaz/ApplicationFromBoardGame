@@ -1,5 +1,5 @@
-﻿using BoardGameCampaign.WebAPI.IoC;
-using BoardGameCampaign.WebAPI.Settings;
+﻿using BoardGameCampaign.Service.IoC;
+using BoardGameCampaign.Service.Settings;
 
 var configuration = new ConfigurationBuilder()
 .AddJsonFile("appsettings.json", optional: false)
