@@ -23,9 +23,9 @@ public class KeepersProvider : IKeepersProvider
 
         var currentDate = DateTime.UtcNow;
 
-        var keepers = _keeperRepository.GetAll(x => (
-            minimumAge == null ||
-            x.Age > minimumAge)); 
+        var keepers = _keeperRepository.GetAll(x =>
+            (minimumAge == null || x.Age > minimumAge) &&
+            (maximumAge == null || x.Age < maximumAge)); 
 
         return _mapper.Map<IEnumerable<KeeperModel>>(keepers);
     }

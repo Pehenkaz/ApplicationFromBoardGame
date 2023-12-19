@@ -2,8 +2,9 @@
 
 namespace BoardGameCampaign.BL.Campaign;
 
-public interface ICampaignManager
+public interface ICampaignsManager
 {
 	CampaignModel CreateCampaign(CreateCampaignModel model);
 	void DeleteCampaign(Guid Id);
+    CampaignModel UpdateKeeper(Guid keeperId, CreateCampaignModel model);
 }
