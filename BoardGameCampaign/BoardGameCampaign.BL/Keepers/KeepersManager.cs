@@ -2,6 +2,7 @@
 using BoardGameCampaign.BL.Keepers.Entities;
 using BoardGameCampaign.DataAccess;
 using BoardGameCampaign.DataAccess.Entities;
+using IdentityModel;
 
 namespace BoardGameCampaign.BL.Keepers;
 
@@ -30,14 +31,22 @@ public class KeepersManager : IKeepersManager
         return _mapper.Map<KeeperModel>(entity);
     }
 
-    //void DeleteKeeper(Guid keeperId)
-    //entity = repository.GetById() => if null throw exception
-    //delete if not null
+    public void DeleteKeeper(Guid keeperId)
+    {
+        var entity = _keepersRepository.GetById(keeperId) ?? throw new Exception("Keeper not found");
+        _keepersRepository.Delete(entity);
+    }
 
-    //KeeperModel UpdateKeeper(UpdateKeeperModel model) //with Id
-    //validate data
-    //entity = repository.GetById(id) => if null throw exception
-    //entity.FirstName = model.FirstName ...
-    //save(entity)
-    //return _mapper.Map<KeeperModel>(entity);
+    public KeeperModel UpdateKeeper(Guid keeperId, CreateKeeperModel model)
+    {
+        //validate data
+        var entity = _keepersRepository.GetById(keeperId) ?? throw new Exception("Keeper not found");
+        entity.Age = model.Age;
+        entity.Nickname = model.Nickname;
+        entity.FirstName = model.FirstName;
+        entity.SecondName = model.SecondName;
+        entity.Patronymic = model.Patronymic;
+        _keepersRepository.Save(entity);
+        return _mapper.Map<KeeperModel>(entity);
+    }
 }

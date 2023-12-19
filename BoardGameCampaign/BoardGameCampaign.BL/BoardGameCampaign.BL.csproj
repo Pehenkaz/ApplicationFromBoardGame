@@ -15,12 +15,18 @@
     <None Remove="Auth\Entities\" />
     <None Remove="Helpers\" />
     <None Remove="Keepers\" />
+    <None Remove="Campaign\" />
+    <None Remove="Campaign\Entities\" />
+    <None Remove="Mapper\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Auth\" />
     <Folder Include="Auth\Entities\" />
     <Folder Include="Helpers\" />
     <Folder Include="Keepers\" />
+    <Folder Include="Campaign\" />
+    <Folder Include="Campaign\Entities\" />
+    <Folder Include="Mapper\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Duende.IdentityServer" Version="6.3.7" />
