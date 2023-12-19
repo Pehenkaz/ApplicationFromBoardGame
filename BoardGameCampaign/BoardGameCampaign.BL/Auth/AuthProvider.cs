@@ -73,14 +73,25 @@ public class AuthProvider : IAuthProvider
         };
     }
 
-    public async Task RegisterUser(string email, string password)
+    public async Task RegisterPlayer(string email, string password)
     {
+        var player = await _playerManager.FindByNameAsync(email);
+        if (!(player is null))
+        {
+            throw new Exception("Player already exists");
+        }
+
         PlayerEntity userEntity = new PlayerEntity()
         {
-            Login = email, //REQUIRED !!!!!!
+            Login = email, 
             FirstName = email
         };
 
-        var createUserResult = await _playerManager.CreateAsync(userEntity, password);
+        var createPlayerResult = await _playerManager.CreateAsync(userEntity, password);
+
+        if(!createPlayerResult.Succeeded)
+        {
+            throw new Exception("Error create player");
+        }
     }
 }
