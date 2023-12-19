@@ -9,25 +9,25 @@ namespace BoardGameCampaign.UnitTests.Repository;
 [Category("Intedration")]
 public class PlayerRepositoryTest : RepositoryTestsBaseClass
 {
-	[Test]
-	public void GetAllPlayersTest()
-	{
+    [Test]
+    public void GetAllPlayersTest()
+    {
         //prepare
         using var context = DbContextFactory.CreateDbContext();
-		var players = new PlayerEntity[]
-		{
-			new PlayerEntity()
-			{
-				Login = "testLogin1",
-				Password = "******1",
-				FirstName = "Name1",
-				SecondName = "SecondName1",
-				Patronymic = "Patronymic1",
-				Age = 22,
-				ExternalId = Guid.NewGuid()
-			},
-			new PlayerEntity()
-			{
+        var players = new PlayerEntity[]
+        {
+            new PlayerEntity()
+            {
+                Login = "testLogin1",
+                Password = "******1",
+                FirstName = "Name1",
+                SecondName = "SecondName1",
+                Patronymic = "Patronymic1",
+                Age = 22,
+                ExternalId = Guid.NewGuid()
+            },
+            new PlayerEntity()
+            {
                 Login = "testLogin2",
                 Password = "******2",
                 FirstName = "Name2",
@@ -36,9 +36,9 @@ public class PlayerRepositoryTest : RepositoryTestsBaseClass
                 Age = 20,
                 ExternalId = Guid.NewGuid()
             }
-		};
-		context.Players.AddRange(players);
-		context.SaveChanges();
+        };
+        context.Players.AddRange(players);
+        context.SaveChanges();
 
         //execute
         var repository = new Repository<PlayerEntity>(DbContextFactory);
@@ -234,7 +234,7 @@ public class PlayerRepositoryTest : RepositoryTestsBaseClass
 
     public void CleanUp()
     {
-        using(var context = DbContextFactory.CreateDbContext())
+        using (var context = DbContextFactory.CreateDbContext())
         {
             context.Players.RemoveRange(context.Players);
             context.SaveChanges();
